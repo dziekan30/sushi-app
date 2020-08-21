@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Container } from 'react-bootstrap';
 
 export default class Home extends Component {
   state = {
@@ -16,18 +17,20 @@ export default class Home extends Component {
   }
   render() {
     return (
-      <div>
+      <Container>
         <div>
-          {this.state.cats.map((cat, index,) =>
-            <ul key={index}>
-              <li >Cat ID: {cat.id} </li>
-              <li >URL: {cat.url} </li>
-              <li >Height: {cat.height} </li>
-              <li >Width: {cat.width} </li>
-            </ul>
-          )}
+          <div>
+            {this.state.cats.map((cat, index,) =>
+              <ul key={index}>
+                <li >Cat ID: {cat.id} </li>
+                <li >URL: {cat.url} </li>
+                <li >Height: {cat.height} </li>
+                <li >Width: {cat.width} </li>
+              </ul>
+            )}
+          </div>
         </div>
-      </div>
+      </Container>
     )
   }
 }
