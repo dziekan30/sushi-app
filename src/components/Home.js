@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Container } from 'react-bootstrap';
+import CatFacts from './CatFacts'
 
 export default class Home extends Component {
   state = {
@@ -13,21 +14,20 @@ export default class Home extends Component {
         const cats = response.data;
         this.setState({ cats });
       })
-    // console.log(this.state.cats)
   }
   render() {
     return (
       <Container>
-        <div>
-          <div>
+        <div className="row">
+          <div className="column-fact-left col-6 ">
             {this.state.cats.map((cat, index,) =>
-              <ul key={index}>
-                <li >Cat ID: {cat.id} </li>
-                <li >URL: {cat.url} </li>
-                <li >Height: {cat.height} </li>
-                <li >Width: {cat.width} </li>
-              </ul>
+              <div key={index}>
+                <img className="cat-img" src={cat.url} alt="" />
+              </div>
             )}
+          </div>
+          <div className="column-fact-right col-6">
+            <CatFacts />
           </div>
         </div>
       </Container>
