@@ -1,41 +1,42 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
+import { Container } from 'react-bootstrap';
+import Say from './Say'
 
 export default class CatFacts extends Component {
   state = {
-    facts: {}
+    fact: ""
   }
 
   componentDidMount() {
     axios.get(`https://catfact.ninja/fact`)
-      // axios.get(`https://cat-fact.herokuapp.com/facts`)
       .then(response => {
-        // console.log(response)
-        const facts = response.data;
-        this.setState({ facts });
+        const fact = response.data.fact;
+        this.setState({ fact });
       })
-    // console.log(this.state.facts)
   }
 
   render() {
+    function refreshPage() {
+      window.location.reload(false);
+    }
     return (
-      <div>
-        <h1>Cat Fact</h1>
-        <div>
-          {/* {console.log(this.state.facts)} */}
-          {Object.keys(this.state.facts).map((fact, index) =>
-            <ul key={index}>
-              <li>{fact.fact}</li>
-              <li>{fact.length}</li>
-              {/* <li>{console.log(fact.fact)}</li> */}
-            </ul>
-
-
-
-          )}
+      <Container>
+        <div >
+          <div>
+            <h1 className="cat-header">Cat Fact</h1>
+            <div>
+              <h4>{this.state.fact}</h4>
+            </div>
+            <div className=" next-button">
+              <Say fact={this.state.fact} />
+            </div>
+            <div className=" next-button">
+              <button className="btn btn-secondary" onClick={refreshPage}>Click to see next Fact!</button>
+            </div>
+          </div>
         </div>
-      </div>
+      </Container>
 
     )
   }
