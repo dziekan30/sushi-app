@@ -14,8 +14,8 @@ export default function Header() {
             <h3 style={{ fontWeight: "bold" }}>About Sushi</h3>
             <p>We built this app to try out some REST API features as well as a React Speech
             text-to-audio feature, including buttons for Play, Stop, Pause, and Resume.
-            The app displays a Cat Fact from this Cat Facts API as well as an image from
-            this Cat Pictures API. Enjoy!
+            The app displays a Cat Fact from this <a href="https://catfact.ninja/fact">Cat Facts API</a> as well as an image from
+            this <a href="https://api.thecatapi.com/v1/images/search">Cat Pictures API.</a> Enjoy!
              </p>
           </div>
 
