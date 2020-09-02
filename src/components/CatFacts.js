@@ -28,8 +28,8 @@ export default class CatFacts extends Component {
             <div>
               <h4 className="phone-size">{this.state.fact}</h4>
             </div>
-            <div className=" next-button">
-              <Say fact={this.state.fact} />
+            <div className=" next-button say-button">
+              <Say className="say-button" fact={this.state.fact} />
             </div>
             <div className=" next-button">
               <button className="btn btn-secondary" onClick={refreshPage}>Click to see next Fact!</button>
