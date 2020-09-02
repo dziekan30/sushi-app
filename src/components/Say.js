@@ -87,7 +87,7 @@ export default class Say extends Component {
     };
 
     return (
-      <Container>
+      <Container className="play-buttons">
         <Speech
           stop={true}
           play={true}
