@@ -29,8 +29,8 @@ export default class Say extends Component {
           backgroundColor: 'GhostWhite'
         },
         button: {
-          width: '50px',
-          height: '50px',
+          width: '15%',
+          height: '15%',
           cursor: 'pointer',
           pointerEvents: 'none',
           outline: 'none',
@@ -44,8 +44,8 @@ export default class Say extends Component {
           backgroundColor: 'GhostWhite'
         },
         button: {
-          width: '50px',
-          height: '50px',
+          width: '15%',
+          height: '15%',
           cursor: 'pointer',
           pointerEvents: 'none',
           outline: 'none',
@@ -59,8 +59,8 @@ export default class Say extends Component {
           backgroundColor: 'GhostWhite'
         },
         button: {
-          width: '50px',
-          height: '50px',
+          width: '15%',
+          height: '15%',
           cursor: 'pointer',
           pointerEvents: 'none',
           outline: 'none',
@@ -74,8 +74,8 @@ export default class Say extends Component {
           backgroundColor: 'GhostWhite'
         },
         button: {
-          width: '50px',
-          height: '50px',
+          width: '15%',
+          height: '15%',
           cursor: 'pointer',
           pointerEvents: 'none',
           outline: 'none',

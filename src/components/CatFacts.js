@@ -26,7 +26,7 @@ export default class CatFacts extends Component {
           <div>
             <h1 className="cat-header">Cat Fact</h1>
             <div>
-              <h4>{this.state.fact}</h4>
+              <h4 className="phone-size">{this.state.fact}</h4>
             </div>
             <div className=" next-button">
               <Say fact={this.state.fact} />
